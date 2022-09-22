@@ -74,3 +74,5 @@ end
 gem "font-awesome-sass", "~> 6.2"
 
 gem "devise", "~> 4.8"
+
+gem 'omniauth-google-oauth2'
