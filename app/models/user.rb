@@ -31,3 +31,5 @@ class User < ApplicationRecord
   end
       
 end
+
+# http://127.0.0.1:3000/users/auth/github/callback
