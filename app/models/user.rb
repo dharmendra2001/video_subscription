@@ -21,5 +21,13 @@ class User < ApplicationRecord
    user.save
    user 
   end
+
+  def username 
+    if name?
+      name
+    else
+      email 
+    end
+  end
       
 end
