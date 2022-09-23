@@ -5,3 +5,4 @@ Rails.application.routes.draw do
   get 'privacy', to: 'static_public#privacy'
   get 'term', to: 'static_public#term'
 end
+

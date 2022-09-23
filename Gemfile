@@ -76,3 +76,5 @@ gem "font-awesome-sass", "~> 6.2"
 gem "devise", "~> 4.8"
 
 gem 'omniauth-google-oauth2'
+
+gem 'omniauth-github', github: 'omniauth/omniauth-github', branch: 'master'
