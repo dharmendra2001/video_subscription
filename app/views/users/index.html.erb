@@ -10,6 +10,10 @@
   <strong>Email</strong>
 <%end%>
 
+<%= sort_link(@q, :created_at) do%>
+  <strong>Created</strong>
+<%end%>
+
 <%= search_form_for @q do |f| %>
 
   <%= f.label :email_cont %>
