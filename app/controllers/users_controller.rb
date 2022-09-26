@@ -5,5 +5,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id]) 
+    flash[:alert] = "You are on a user page"
   end
 end
