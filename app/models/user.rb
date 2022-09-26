@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :trackable,
+         :confirmable,
          :omniauthable , omniauth_providers: [:google_oauth2, :github]
 
   
@@ -19,6 +20,8 @@ class User < ApplicationRecord
    user.uid = access_token.uid
    user.name = access_token.info.name
    user.image = access_token.info.image
+  #  user.confirmed_at = Time.zone.now
+   user.skip_confirmation! 
    user.save
    user 
   end
