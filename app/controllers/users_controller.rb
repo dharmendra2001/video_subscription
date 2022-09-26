@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
   include Pagy::Backend
   def index
-    @pagy , @user = pagy(User.all.order(created_at: :desc))  
+    # @pagy , @users = pagy(User.order(created_at: :desc))  
+    @q = User.order(created_at: :desc).ransack(params[:q])
+    @pagy, @user = pagy(@q.result(distinct: true))
   end
 
   def show
