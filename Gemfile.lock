@@ -187,6 +187,7 @@ GEM
       actionpack (>= 4.2)
       omniauth (~> 2.0)
     orm_adapter (0.5.0)
+    pagy (3.11.0)
     pg (1.4.3)
     public_suffix (5.0.0)
     puma (5.6.5)
@@ -297,6 +298,7 @@ DEPENDENCIES
   omniauth-github!
   omniauth-google-oauth2
   omniauth-rails_csrf_protection (~> 1.0)
+  pagy (~> 3.5)
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4)

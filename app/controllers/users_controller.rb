@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
+  include Pagy::Backend
   def index
-    @user = User.all.order(created_at: :desc)  
+    @pagy , @user = pagy(User.all.order(created_at: :desc))  
   end
 
   def show

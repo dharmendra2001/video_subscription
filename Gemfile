@@ -82,3 +82,5 @@ gem 'omniauth-github', github: 'omniauth/omniauth-github', branch: 'master'
 gem "omniauth-rails_csrf_protection", "~> 1.0"
 
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master', group: 'development'
+
+gem 'pagy', '~> 3.5'
