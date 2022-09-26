@@ -21,7 +21,7 @@ class User < ApplicationRecord
    user.name = access_token.info.name
    user.image = access_token.info.image
   #  user.confirmed_at = Time.zone.now
-   user.skip_confirmation! 
+  #  user.skip_confirmation! 
    user.save
    user 
   end
