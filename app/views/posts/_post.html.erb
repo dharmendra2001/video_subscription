@@ -8,10 +8,11 @@
     <strong>Body:</strong>
     <%= markdown(post.body) %>
   </p>
-
+  
   <p>
     On <%= post.created_at.strftime("%d/%b/%y")%>
     By <%= link_to post.user.username, post.user %>
+    <%= premium_label(post.premium)%>
   </p>
 
 </div>

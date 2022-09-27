@@ -90,3 +90,5 @@ gem 'ransack'
 gem 'devise_invitable', '~> 2.0.0'
 
 gem 'redcarpet'
+
+gem 'stripe'
