@@ -6,6 +6,7 @@
     <h2><%= link_to post.title, post%></h2>
     On <%= post.created_at.strftime("%d/%b/%y")%>
     By <%= link_to post.user.username, post.user %>
+    <%= premium_label(post.premium)%>
     <p>
       <%= link_to "Show this post", post %>
     </p>
