@@ -15,4 +15,15 @@
 <%= 'created_at'.humanize%>:
 <%= user.created_at.strftime("%d/%b/%y")%><br>
 
+<%= 'created_by_invite'.humanize%>:
+<%= boolean_label(user.created_by_invite?)%><br>
+
+<%= 'invitation_accepted_at'.humanize%>:
+<%= boolean_label(user.invitation_accepted_at?)%><br>
+
+<%= 'invitees'.humanize%>:
+<%= user.invitees.count%>
+<% user.invitees.each do |invitee|%>
+  <%= invitee.email%>
+<%end%>
 <hr>
