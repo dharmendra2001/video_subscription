@@ -16,6 +16,11 @@
             Home
           <% end %>
           <% if current_user %>
+            <%= deep_active_link_to new_post_path do %>
+              <div class="fa fa-plus"></div>
+              New post
+            <% end %>
+
             <%= deep_active_link_to posts_path do %>
               <div class="fa fa-gem"></div>
               Posts
