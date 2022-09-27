@@ -3,9 +3,12 @@
 <h1>Posts</h1>
 <div id="posts">
   <% @posts.each do |post| %>
-    <%= render post %>
+    <h2><%= link_to post.title, post%></h2>
+    On <%= post.created_at.strftime("%d/%b/%y")%>
+    By <%= link_to post.user.username, post.user %>
     <p>
       <%= link_to "Show this post", post %>
     </p>
+    <hr>
   <% end %>
 </div>
