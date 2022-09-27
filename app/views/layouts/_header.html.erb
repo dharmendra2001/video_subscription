@@ -11,12 +11,12 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto">
-          <%= link_to root_path, class: "nav-link #{'active fw-bold' if current_page?(root_path)}" do %>
+          <%= deep_active_link_to root_path do %>
             <div class="fa fa-home"></div>
             Home
           <% end %>
           <% if current_user %>
-            <%= link_to users_path, class: "nav-link #{'active fw-bold' if current_page?(users_path)}" do %>
+            <%= deep_active_link_to users_path do %>
               <div class="fa fa-users"></div>
               Users
             <% end %>
@@ -35,11 +35,11 @@
                 <%end%>
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown dropdown-menu-lg-start">
-                <%= link_to user_path(current_user), class: "dropdown-item #{'active fw-bold' if current_page?(user_path(current_user))}" do %>
+                <%= deep_active_link_to_dropdown_item user_path(current_user) do %>
                 <div class="fa fa-cog"></div>
                 <b>My Profile</b>
               <% end %>
-                <%= link_to edit_user_registration_path, class: "dropdown-item #{'active fw-bold' if current_page?(edit_user_registration_path)}" do %>
+                <%= deep_active_link_to_dropdown_item edit_user_registration_path do %>
                   <div class="fa fa-cog"></div>
                   <b>Account settings</b>
                 <% end %>
@@ -50,8 +50,8 @@
               </ul>
             </li>
           <% else %>
-            <%= link_to "Log in", new_user_session_path, class: "nav-link #{'active fw-bold' if current_page?(new_user_session_path)}" %>
-            <%= link_to "Sign up", new_user_registration_path, class: "nav-link #{'active fw-bold' if current_page?(new_user_registration_path)}" %>
+            <%= active_link_to "Log in", new_user_session_path %>
+            <%= active_link_to "Sign up", new_user_registration_path %>
           <% end %>
         </ul>
       </div>
