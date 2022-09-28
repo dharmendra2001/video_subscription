@@ -21,6 +21,10 @@
 <%= 'invitation_accepted_at'.humanize%>:
 <%= boolean_label(user.invitation_accepted_at?)%><br>
 
+<%= 'stripe_customer_id'.humanize%>:
+<%= user.stripe_customer_id%><br>
+
+
 <%= 'posts_count'.humanize%>:
 <%= user.posts_count%><br>
 
