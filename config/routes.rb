@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'term', to: 'static_public#term'
 
   resources :posts
+  resources :webhooks, only: [:create]
 
   resources :users, only: %i[index show]
 end
